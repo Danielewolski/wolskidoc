@@ -7,240 +7,106 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
         <title>My documentation!</title>
-        <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
-        <meta name="author" content="Carlos Yllobre">
-         <link rel="icon" type="image/png" href="wlogo.png">
-        <link rel="stylesheet" href="style.css?">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
-        
-        <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+        <meta name="description" content="Documentation">
+        <meta name="author" content="Wolski">
+        <link rel="icon" type="image/png" href="wlogo.png">
+        <link rel="stylesheet" href="css/style.css?">            
     
-    
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
     </head>
     
     <body>
     
-        <div class="navbar clear nav-top">
-            <div class="row content">
-                <a href="#"><img class="logo" src="wolskidoc.png"></a>
-                <a class="right" style="text-decoration: underline;" href="#"><i class="fas fa-book"></i>&nbsp; Documentation</a>
-                <!-- <a class="right" href="mailto:yourapp@email.com" target="_blank"><i class="fas fa-paper-plane"></i>&nbsp; yourapp@email.com</a> -->
+        <header class="header">
+            <div style="min-height: 60px; color: #5d6778;">
+                <div style="display: inline-block; margin: 1.25rem;">
+                    <button class="menu-toggle" aria-expanded="false" aria-controls="sidebar" id="menuToggle">
+                        ☰
+                    </button>
+                    <a href="#" style="text-decoration: none;">
+                        <span style="color: #252930; font-size: 1.5rem; font-weight: 700;">
+                            WOLSKI<span style="font-weight: 300;">DOC</span>
+                        </span>
+                    </a>
+                    <span class="version">v1.0.0</span>
+                </div>
             </div>
+        </header>
+
+        <div class="main-container">
+            
+            <nav class="sidebar" id="sidebar">
+                <div class="sidebar-content">
+                    <a href="#">Introduzione</a>
+                    <a href="#">Glossario</a>
+                    <a href="#">Setup</a>
+                    <button class="close-sidebar" aria-label="Chiudi menu" id="closeSidebar">
+                        &times;
+                    </button>
+                </div>
+            </nav>
+            
+            <main class="content">
+                <h1>
+                    Glossary
+                    <span>#</span>
+                </h1>
+
+                <h2>Fondamenti di Programmazione e Strutture Dati</h2>
+                <p>Logica & Linguaggi</p>
+                <p>Dati & Strutture</p>
+                <p>Contesto & Ambito</p>
+                <p>Scripting & Runtime</p>
+
+                <h2>Architettura Web e Reti (Networking)</h2>
+                <p>Protocolli Web</p>
+                <p>Internet & Rete</p>
+                <p>Comunicazione & Dati</p>
+                <p>Sicurezza delle Reti</p>
+
+                <h2>Sicurezza (Cryptography e Web Security)</h2>
+                <p>Criptografia & Algoritmi</p>
+                <p>Protocolli Sicuri</p>
+                <p>Vulnerabilità Web</p>
+                <p>Gestione Accessi</p>
+
+                <h2>Front-End Development e Design (HTML, CSS, JavaScript)</h2>
+                <p>Markup & Struttura</p>
+                <p>Stile & Layout (CSS)</p>
+                <p>Interattività & Scripting</p>
+                <p>User Interface (UI/UX)</p>
+                <p>Grafica & Media</p>
+
+                <h2>Browser e Motori</h2>
+                <p>Browser</p>
+                <p>Motori</p>
+                <p>Contesto Browser</p>
+                <p>Prestazioni</p>
+
+                <h2>Sviluppo e Strumenti (DevOps e Processo)</h2>
+                <p>Strumenti e Metodi</p>
+                <p>Testing & Debug</p>
+                <p>Strutture Informatiche</p>
+
+                <h2>Acronimi e Terminologia Specifica</h2>
+                <p>Acronimi Rilevanti</p>
+
+                <h2>Tipografia e Contenuti (Accessibilità e Media)</h2>
+                <p>Tipografia</p>
+                <p>Accessibilità</p>
+                <p>Geolocalizzazione</p>
+
+                <h2>Cloud, Database e Strutture Dati</h2>
+                <p>Cloud & DB</p>
+                <p>Dati & Storage</p>
+            </main>
+            
         </div>
     
-        <div class="container clear">
-            <div class="row wrapper">
-    
-                <div class="sidepanel">
-    
-                    <a class="title" href="#">Introduction</a>
-                    
-                    <a class="section" href="#">Supported Versions</a>
-                    <a class="section" href="#">About this App</a>
-                    <a class="section" href="#technology">Technology</a>
-    
-                    <div class="divider left"></div>
-    
-                    <a class="title" href="#advanced">Advanced Features</a>
-    
-                    <a class="section" href="#advanced">Feature A</a>
-                    <a class="section" href="#featureb">Feature B</a>
-                    <a class="section" href="#featurec">Feature C</a>
-                    <a class="sub-section" href="#featurec1">Feature C.1</a>
-                    <a class="sub-section" href="#featurec2">Feature C.2</a>
-                    <a class="section" href="#featured">Feature D</a>
-                
-                 <div class="space double"></div>
-    
-                </div>
-    
-                <div class="right-col">
-                
-    
-    
-                    <h1 >Introduction</h1>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-                
-                    <h2>Supported Versions:</h2>
-                 
-                    <p><b>App Version 1.0.0.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    
-                    <h2>About this App</h2>
-                    
-                    <p id="technology"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    
-                    <h2>Technology</h2>
-                    
-                    <p>This app is built with Javascript, HTML and CSS.<br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-    
-                    <p id="gettingstarted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p> 
-                     
-            <div class="divider" style="width:24%; margin:30px 0;"></div>
-    
-                    <h1>Getting Started</h1>
-    
-                    <h2>This is a sub-header</h2>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-    
-                    <p id="installingapp"><b>Important:</b> This line is for an important information.</p>
-                    
-                    
-                    <h2>Install the App</h2>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    
-                       <ol>
-                        <li>
-                         The first thing you need to do to install this app.
-                        </li>
-                        <br>
-                        <li>
-                        The second thing you need to do to install this app.
-                        </li>
-                        <br id="openingapp">
-                        <li>
-                         The app is installed now.
-                        </li>
-                        <br>
-                    </ol>
-                    
-    
-                    <h2>Opening the app</h2>
-                    
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    
-                     <ol>
-                        <li>
-                         The first thing you need to do to open this app.
-                        </li>
-                        <br>
-                        <li>
-                         The second thing you need to do to open this app.
-                        </li>
-                        <br>
-                        <li>
-                          The third thing you need to do to open this app.
-                        </li>
-                        <br>
-                        <li>
-                         Open the app and start using it!
-                        </li>
-                        <br>
-                    </ol>
-                    
-                    <p id="basicfeatures">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    
-                        
-                <div class="divider" style="width:24%; margin:30px 0;"></div>
-                
-                
-                    <h1>Basic Features</h1>
-    
-                    <h2>Feature 1</h2>
-                    
-                    <p id="basicfeatures">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    </p>
-                    
-                    <h2>Feature 2</h2>
-                    
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    <br><br>
-                    <b>Explanation 1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br>
-                    <br>
-                    <b>Explanation 2</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br>
-                    <br>
-                    <b>Explanation 3</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br>
-                    <br id="feature3">
-                    <b>Explanation 4</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                    
-                    <h2>Feature 3</h2>
-                    
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    <br id="feature4">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                    
-                    <h2>Feature 4</h2>
-                    
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      <br>
-                      <br>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     <br>
-                     <br id="feature5">
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    
-                    <div class="divider" style="width:24%; margin:30px 0;"></div>
-                    
-                    <h1>Advanced Features</h1>
-                    
-                    <br id="featurec">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    
-                    
-                    <h2>Feature C</h2>
-                      
-                    <p id="featurec1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      
-                     
-                    <h2>Feature C.1</h2>
-    
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit:
-                    </p>
-                    
-                       <ul>
-                        <li>
-                        <b>Point 1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        <br>
-                        <li>
-                        <b>Point 2</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </li>
-                        <br id="featurec2">
-                         <li>
-                        <b>Point 3</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        <br>
-                    </ul>
-                       
-                     <h2>Feauture C.2</h2>
-                       
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        <br>
-                        <br>
-                         <b>Important:</b> Please notice that lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        <br>
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     </p>
-                      
-                    
-    
-                </div>
-    
-            </div>
-    
-    
-        </div>
-    
-    
+
+
+        <script type="text/javascript" src="js/javascript.js"></script>
     </body>
 
 </html>

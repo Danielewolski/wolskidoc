@@ -1,0 +1,87 @@
+h1,h2,h3,h4,h5,h6{font-family:Poppins,sans-serif;color:#252930;font-weight:600}
+body{
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    padding-top: 67px;
+}
+.header{box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1); background-color: #fff; position: fixed; top: 0; left: 0; right: 0; width: 100%;}
+.version{padding: 0.25rem 0.5rem; background-color: #0d6efd; border-radius: 0.25rem; color: white; font-size: 0.75rem}
+
+
+
+.main-container {display: flex; padding-top: 0.5rem;}
+.sidebar {
+    width: 250px; /* Larghezza fissa della sidebar su desktop */
+    flex-shrink: 0; /* Impedisce che la sidebar si restringa */
+    padding: 0 1rem;
+    position: sticky; /* Rende la sidebar "appiccicosa" */
+    top: 67px; /* Fissata sotto l'header (che ha un padding-top di 67px sul body) */
+    height: calc(100vh - 67px); /* Altezza pari alla finestra meno l'altezza dell'header */
+    overflow-y: auto; /* Abilita lo scroll interno se i contenuti superano l'altezza */
+    border-right: 1px solid #eee; /* Bordo di separazione */
+}
+
+.sidebar-content {display: flex; flex-direction: column; padding: 1.75rem;}
+.sidebar-content a {text-decoration: none; color: #5d6778; padding: 0.5rem 0; font-weight: 500;}
+.sidebar-content a:hover {color: #0d6efd;}
+.close-sidebar {display: none;}
+.content {flex-grow: 1; padding: 0 2rem;}
+
+.menu-toggle {
+    display: none; /* Nascosto per default su desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #252930;
+}
+
+@media (max-width: 992px) {
+    
+    .menu-toggle {
+        display: initial;
+    }
+
+    /*
+     * LA SIDEBAR SU MOBILE:
+     * - Posizionamento fisso per coprire lo schermo
+     * - Traslata fuori schermo per nasconderla
+     * - Z-index alto per sovrapporsi a tutto
+     */
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000; 
+        height: 100vh;
+        width: 300px; 
+        background-color: #fff;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        transform: translateX(-100%); /* Nascondi fuori dallo schermo */
+        transition: transform 0.3s ease-in-out; /* Animazione per l'apertura/chiusura */
+        padding: 0; /* Rimuovi padding laterale */
+    }
+
+    /* Stato: Sidebar aperta */
+    .sidebar.open {
+        transform: translateX(0); /* Mostra la sidebar */
+    }
+    
+    /* Nasconde il pulsante di chiusura su mobile */
+    .close-sidebar {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #252930;
+    }
+    
+    /* Il contenuto si espande a schermo intero */
+    .content {
+        width: 100%;
+        padding-top: 0; /* Rimuovi padding top, gestito dal main-container */
+    }
+}

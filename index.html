@@ -19,32 +19,72 @@
     <body>
     
         <header class="header">
-            <div style="min-height: 60px; color: #5d6778;">
-                <div style="display: inline-block; margin: 1.25rem;">
-                    <button class="menu-toggle" aria-expanded="false" aria-controls="sidebar" id="menuToggle">
-                        ☰
-                    </button>
-                    <a href="#" style="text-decoration: none;">
-                        <span style="color: #252930; font-size: 1.5rem; font-weight: 700;">
-                            WOLSKI<span style="font-weight: 300;">DOC</span>
-                        </span>
-                    </a>
-                    <span class="version">v1.0.0</span>
-                </div>
+            <div style="min-height: 60px; display: flex; align-items: center; padding: 0 1.25rem;">
+                
+                <button class="menu-toggle" aria-expanded="false" aria-controls="sidebar" id="menuToggle">
+                    ☰
+                </button>
+
+                <a href="#top" style="text-decoration: none; margin-left: 1rem;"> 
+                    <span style="color: #252930; font-size: 1.5rem; font-weight: 700;">
+                        WOLSKI<span style="font-weight: 300;">DOC</span>
+                    </span>
+                </a>
+
+                <span class="version" style="margin-left: 0.5rem;">v1.0.0</span>
+                
             </div>
         </header>
 
         <div class="main-container">
             
-            <nav class="sidebar" id="sidebar">
+            <!-- <nav class="sidebar" id="sidebar">
                 <div class="sidebar-content">
-                    <a href="#">Introduzione</a>
-                    <a href="#">Glossario</a>
-                    <a href="#">Setup</a>
+                    <a href="#">&bull; Glossario</a>
                     <button class="close-sidebar" aria-label="Chiudi menu" id="closeSidebar">
                         &times;
                     </button>
                 </div>
+            </nav> -->
+            <nav class="sidebar" id="sidebar">
+                <div class="sidebar-content">
+                    <button class="close-sidebar" aria-label="Chiudi menu" id="closeSidebar">
+                        &times;
+                    </button>
+                    <div class="sidebar-section">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h2 class="section-title">Glossary</h2>
+                            <h2 class="section-title">-</h2>
+                        </div>
+                        <div class="section-content">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <h3 class="subsection-title">Fondamenti di Programmazione e Strutture Dati </h3>
+                                <h3 class="subsection-title">-</h3>
+                            </div>
+                            <ul class="subsection-list">
+                                <li class="list-item"><a href="#logica-linguaggi">Logica & Linguaggi</a></li>
+                                <li class="list-item"><a href="#dati-strutture">Dati & Strutture</a></li>
+                                <li class="list-item"><a href="#contesto-ambito">Contesto & Ambito</a></li>
+                                <li class="list-item"><a href="#scripting-runtime">Scripting & Runtime</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="section-content">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <h3 class="subsection-title">Architettura Web e Reti (Networking) –</h3>
+                                <h3 class="subsection-title">–</h3>
+                            </div>
+
+                            <ul class="subsection-list">
+                                <li class="list-item"><a href="#protocolli-web">Protocolli Web</a></li>
+                                <li class="list-item"><a href="#internet-rete">Internet & Rete</a></li>
+                                <li class="list-item"><a href="#comunicazione-dati">Comunicazione & Dati</a></li>
+                                <li class="list-item"><a href="#sicurezza-reti">Sicurezza delle Reti</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
             </nav>
             
             <main class="content">
@@ -53,23 +93,23 @@
                     <span>#</span>
                 </h1>
 
-                <h2>Fondamenti di Programmazione e Strutture Dati</h2>
-                <p>Logica & Linguaggi</p>
-                <p>Dati & Strutture</p>
-                <p>Contesto & Ambito</p>
-                <p>Scripting & Runtime</p>
+                <h2 id="fondamenti-programmazione">Fondamenti di Programmazione e Strutture Dati</h2>
+                <p id="logica-linguaggi">Logica & Linguaggi</p>
+                <p id="dati-strutture">Dati & Strutture</p>
+                <p id="contesto-ambito">Contesto & Ambito</p>
+                <p id="scripting-runtime">Scripting & Runtime</p>
 
-                <h2>Architettura Web e Reti (Networking)</h2>
-                <p>Protocolli Web</p>
-                <p>Internet & Rete</p>
-                <p>Comunicazione & Dati</p>
-                <p>Sicurezza delle Reti</p>
+                <h2 id="architettura-web">Architettura Web e Reti (Networking)</h2>
+                <p id="protocolli-web">Protocolli Web</p>
+                <p id="internet-rete">Internet & Rete</p>
+                <p id="comunicazione-dati">Comunicazione & Dati</p>
+                <p id="sicurezza-reti">Sicurezza delle Reti</p>
 
-                <h2>Sicurezza (Cryptography e Web Security)</h2>
-                <p>Criptografia & Algoritmi</p>
-                <p>Protocolli Sicuri</p>
-                <p>Vulnerabilità Web</p>
-                <p>Gestione Accessi</p>
+                <h2 id="sicurezza">Sicurezza (Cryptography e Web Security)</h2>
+                <p id="criptografia-algoritmi">Criptografia & Algoritmi</p>
+                <p id="protocolli-sicuri">Protocolli Sicuri</p>
+                <p id="vulnerabilita-web">Vulnerabilità Web</p>
+                <p id="gestione-accessi">Gestione Accessi</p>
 
                 <h2>Front-End Development e Design (HTML, CSS, JavaScript)</h2>
                 <p>Markup & Struttura</p>

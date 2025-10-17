@@ -20,9 +20,9 @@ body{
     border-right: 1px solid #eee; /* Bordo di separazione */
 }
 
-.sidebar-content {display: flex; flex-direction: column; padding: 1.75rem;}
-.sidebar-content a {text-decoration: none; color: #5d6778; padding: 0.5rem 0; font-weight: 500;}
-.sidebar-content a:hover {color: #0d6efd;}
+.sidebar-content {display: flex; flex-direction: column;}
+/* .sidebar-content a {text-decoration: none; color: #5d6778; padding: 0.5rem 0; font-weight: 500; font-size: 1.25rem}
+.sidebar-content a:hover {color: #0d6efd;} */
 .close-sidebar {display: none;}
 .content {flex-grow: 1; padding: 0 2rem;}
 
@@ -39,6 +39,10 @@ body{
     
     .menu-toggle {
         display: initial;
+    }
+
+    .sidebar-content{
+        padding: 3.5rem 2rem;
     }
 
     /*
@@ -84,4 +88,48 @@ body{
         width: 100%;
         padding-top: 0; /* Rimuovi padding top, gestito dal main-container */
     }
+    
+}
+
+/* PROVA */
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #5d6778;
+}
+
+/* Stile del Sottotitolo (Fondamenti di Programmazione...) */
+.subsection-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0 10px 0;
+    color: #5d6778;
+}
+
+.section-content{
+    padding-left: 10px;
+}
+
+/* Stile della Lista (Logica & Linguaggi, Dati & Strutture) */
+.subsection-list {
+    list-style: none; /* Rimuove i pallini di default */
+    padding-left: 0; /* Rimuove l'indentazione predefinita della lista */
+    margin: 0;
+}
+
+.list-item a{
+    text-decoration: none;
+    color: #5d6778;
+    font-size: 1rem;
+    font-weight: 400; /* Testo più leggero */
+    line-height: 1.5;
+    /* Aggiunge l'indentazione per allineare sotto il sottotitolo */
+    padding-left: 10px; 
+}
+
+.list-item a:hover {
+    color: black; /* Un colore di evidenziazione */
+    cursor: pointer;
 }

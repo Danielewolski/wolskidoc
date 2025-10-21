@@ -20,7 +20,7 @@ body{
     border-right: 1px solid #eee; /* Bordo di separazione */
 }
 
-.sidebar-content {display: flex; flex-direction: column;}
+/* .sidebar-content {display: flex; flex-direction: column;} */
 /* .sidebar-content a {text-decoration: none; color: #5d6778; padding: 0.5rem 0; font-weight: 500; font-size: 1.25rem}
 .sidebar-content a:hover {color: #0d6efd;} */
 .close-sidebar {display: none;}
@@ -133,3 +133,107 @@ body{
     color: black; /* Un colore di evidenziazione */
     cursor: pointer;
 }
+
+
+
+
+
+
+/* Stile base del contenitore */
+/* .accordion {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+} */
+
+/* Stile dell'intestazione (il titolo cliccabile) */
+.accordion-header {
+    display: flex; /* Permette all'icona di stare sulla destra */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #5d6778;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    user-select: none; /* Impedisce la selezione del testo */
+}
+
+/* Stile dell'icona (+/-) */
+.toggle-icon {
+    font-size: 1.5em;
+    margin-left: 10px;
+    font-weight: normal; /* Rende il - o + meno "spesso" */
+    color: #999;
+}
+
+/* Stile del contenuto (la lista di voci) */
+.accordion-content {
+    /* Per default, il contenuto è nascosto. Verrà mostrato tramite JS e la classe 'open'. */
+    max-height: 0;
+    overflow: hidden; /* Nasconde il contenuto in eccesso quando max-height è 0 */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animazione fluida */
+}
+
+/* Quando il contenuto è APERTO */
+.accordion-content.open {
+    max-height: 500px; /* Valore grande per mostrare tutto il contenuto. */
+    padding-bottom: 10px;
+}
+
+/* Stile della lista interna */
+.accordion-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 15px; /* Indentazione per la lista interna */
+    line-height: 1.6;
+}
+
+.accordion-content li {
+    font-size: 1em;
+    font-weight: normal;
+    color: #666;
+}
+
+
+/* -------------------------------------- */
+/* STILI PER IL CONTENITORE PRINCIPALE (GLOSSARY) */
+/* -------------------------------------- */
+
+.main-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #5d6778;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.main-toggle-icon {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #999;
+}
+
+/* Gestione del contenuto del Glossary (come prima, con open/closed) */
+.main-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out; /* Leggermente più lenta per l'elemento principale */
+}
+
+.main-accordion-content.open {
+    max-height: 2000px; /* Deve essere abbastanza grande da contenere TUTTO */
+    padding: 0 0 20px 10px;
+}
+
+/* -------------------------------------- */
+/* STILI PER GLI ELEMENTI INTERNI (Fondamenti, Architettura) - Rimanenti uguali */
+/* -------------------------------------- */
+
+/* ... Incolla qui il CSS precedente per .accordion-header, .accordion-content, etc. ... */

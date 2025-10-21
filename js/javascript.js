@@ -46,3 +46,49 @@ window.addEventListener('load', function() {
         // sessionStorage.removeItem('scrollPosition');
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Funzione generica per gestire il toggle di qualsiasi accordion
+    function setupAccordion(headerSelector, contentSelector, iconSelector) {
+        const headers = document.querySelectorAll(headerSelector);
+
+        headers.forEach(header => {
+            header.addEventListener('click', function() {
+                // Il contenitore del gruppo (main-accordion-item o accordion-item)
+                const item = this.closest(headerSelector.includes('main') ? '.main-accordion-item' : '.accordion-item');
+                // Il contenuto da aprire/chiudere
+                const content = item.querySelector(contentSelector);
+                // L'icona +/-
+                const icon = item.querySelector(iconSelector);
+
+                // Toggle della classe 'open'
+                content.classList.toggle('open');
+
+                // Aggiornamento dell'icona
+                if (content.classList.contains('open')) {
+                    icon.textContent = '-';
+                } else {
+                    icon.textContent = '+';
+                }
+            });
+        });
+    }
+
+    // A. Setup per l'accordion PRINCIPALE (Glossary)
+    setupAccordion('.main-accordion-header', '.main-accordion-content', '.main-toggle-icon');
+
+    // B. Setup per gli accordion SECONDARI (Fondamenti, Architettura)
+    setupAccordion('.accordion-header', '.accordion-content', '.toggle-icon');
+});

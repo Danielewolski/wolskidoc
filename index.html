@@ -19,13 +19,12 @@
     <body>
     
         <header class="header">
-            <div style="min-height: 60px; display: flex; align-items: center; padding: 0 1.25rem;">
-                
+            <div class="header-inner">
                 <button class="menu-toggle" aria-expanded="false" aria-controls="sidebar" id="menuToggle">
                     ☰
                 </button>
 
-                <a href="#top" style="text-decoration: none; margin-left: 1rem;"> 
+                <a href="#top" class="header-brand"> 
                     <span style="color: #252930; font-size: 1.5rem; font-weight: 700;">
                         WOLSKI<span style="font-weight: 300;">DOC</span>
                     </span>
@@ -44,7 +43,7 @@
                         &times;
                     </button>
 
-                    <div class="main-accordion-item">
+                    <!-- <div class="main-accordion-item">
 
 
                         <h1 class="main-accordion-header">
@@ -100,66 +99,181 @@
                                         </ul>
                                     </div>
                                 </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        Front-End Development e Design (HTML, CSS, JavaScript)
+                                        <span class="toggle-icon">+</span>
+                                    </h2>
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="list-item"><a href="#markup-struttura">Markup & Struttura</a></li>
+                                            <li class="list-item"><a href="#stile-layout">Stile & Layout</a></li>
+                                            <li class="list-item"><a href="#interattivita-scripting">Interattività & Scripting</a></li>
+                                            <li class="list-item"><a href="#ui-ux">User Interface (UI/UX)</a></li>
+                                            <li class="list-item"><a href="#grafica-media">Grafica & Media</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        Browser e Motori
+                                        <span class="toggle-icon">+</span>
+                                    </h2>
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="list-item"><a href="#browser">Browser</a></li>
+                                            <li class="list-item"><a href="#motori">Motori</a></li>
+                                            <li class="list-item"><a href="#contesto-browser">Contesto Browser</a></li>
+                                            <li class="list-item"><a href="#prestazioni">Prestazioni</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        Sviluppo e Strumenti (DevOps e Processo)
+                                        <span class="toggle-icon">+</span>
+                                    </h2>
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="list-item"><a href="#strumenti-metodi">Strumenti e Metodi</a></li>
+                                            <li class="list-item"><a href="#testing-debug">Testing & Debug</a></li>
+                                            <li class="list-item"><a href="#strutture-informatiche">Strutture Informatiche</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        Acronimi e Terminologia Specifica
+                                        <span class="toggle-icon">+</span>
+                                    </h2>
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="list-item"><a href="#acronimi-rilevanti">Acronimi Rilevanti</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        Tipografia e Contenuti (Accessibilità e Media)
+                                        <span class="toggle-icon">+</span>
+                                    </h2>
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="list-item"><a href="#tipografia">Tipografia</a></li>
+                                            <li class="list-item"><a href="#accessibilita">Accessibilità</a></li>
+                                            <li class="list-item"><a href="#geolocalizzazione">Geolocalizzazione</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        Cloud, Database e Strutture Dati
+                                        <span class="toggle-icon">+</span>
+                                    </h2>
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="list-item"><a href="#cloud-db">Cloud & DB</a></li>
+                                            <li class="list-item"><a href="#dati-storage">Dati & Storage</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </nav>
             
             <main class="content">
-                <h1>
-                    Glossary
-                    <span>#</span>
-                </h1>
+                <div>
+                    <h1>Glossary <span>#</span></h1>
 
-                <h2 id="fondamenti-programmazione">Fondamenti di Programmazione e Strutture Dati</h2>
-                <p id="logica-linguaggi">Logica & Linguaggi</p>
-                <p id="dati-strutture">Dati & Strutture</p>
-                <p id="contesto-ambito">Contesto & Ambito</p>
-                <p id="scripting-runtime">Scripting & Runtime</p>
+                    <div>
+                        <h2 id="fondamenti-programmazione">Fondamenti di Programmazione e Strutture Dati</h2>
+                        <div>
+                            <h3 id="logica-linguaggi">Logica & Linguaggi</h3>
+                            <div>
+                                <b>Algoritmo (Algorithm)</b>
+                                <p>Un <b>algoritmo</b> è una serie di istruzioni per eseguire una funzione.</p>
+                                <p>In altre parole, un algoritmo è un mezzo per descrivere un modo per risolvere un problema in modo che possa essere risolto ripetutamente, da esseri umani o macchine. Gli informatici confrontano l'efficienza degli algoritmi attraverso il concetto di "complessità algoritmica (Algorithmic Complexity)" o notazione "Big O"</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <b>Programmazione informatica (Computer Programming)</b>
+                                <p><b>La programmazione informatica</b> è il processo di composizione e organizzazione di un insieme di istruzioni. Queste istruzioni indicano a un programma informatico/software cosa fare in un linguaggio comprensibile al computer. Queste istruzioni sono disponibili in molti linguaggi diversi, come C++, Java, JavaScript, HTML, Python, Ruby e Rust.</p>
+                                <p>Utilizzando un linguaggio appropriato, è possibile programmare/creare qualsiasi tipo di software. Ad esempio, un programma che aiuta gli scienziati con calcoli complessi, un database che memorizza enormi quantità di dati, un sito web che consente di scaricare musica o un software di animazione che consente di creare filmati animati.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <b>Flusso di controllo (Control flow)</b>
+                                <p><b>Il flusso di controllo</b> è l'ordine in cui il computer esegue le istruzioni in uno script.</p>
+                                <p>Il codice viene eseguito in ordine dalla prima all'ultima riga del file, a meno che il computer non si imbatta in strutture (estremamente frequenti) che modificano il flusso di controllo, come istruzioni condizionali e cicli.</p>
+                            </div>
+                        </div>
+                        <h3 id="dati-strutture">Dati & Strutture</h3>
+                        <h3 id="contesto-ambito">Contesto & Ambito</h3>
+                        <h3 id="scripting-runtime">Scripting & Runtime</h3>
+                    </div>
+                    <div>
+                        <h2 id="architettura-web">Architettura Web e Reti (Networking)</h2>
+                        <h3 id="protocolli-web">Protocolli Web</h3>
+                        <h3 id="internet-rete">Internet & Rete</h3>
+                        <h3 id="comunicazione-dati">Comunicazione & Dati</h3>
+                        <h3 id="sicurezza-reti">Sicurezza delle Reti</h3>
+                    </div>
+                    <div>
+                        <h2 id="sicurezza">Sicurezza (Cryptography e Web Security)</h2>
+                        <h3 id="criptografia-algoritmi">Criptografia & Algoritmi</h3>
+                        <h3 id="protocolli-sicuri">Protocolli Sicuri</h3>
+                        <h3 id="vulnerabilita-web">Vulnerabilità Web</h3>
+                        <h3 id="gestione-accessi">Gestione Accessi</h3>
+                    </div>
+                    <div>
+                        <h2 id="frontend-development">Front-End Development e Design (HTML, CSS, JavaScript)</h2>
+                        <h3 id="markup-struttura">Markup & Struttura</h3>
+                        <h3 id="stile-layout">Stile & Layout (CSS)</h3>
+                        <h3 id="interattivita-scripting">Interattività & Scripting</h3>
+                        <h3 id="ui-ux">User Interface (UI/UX)</h3>
+                        <h3 id="grafica-media">Grafica & Media</h3>
+                    </div>
+                    <div>
+                        <h2 id="browser-motori">Browser e Motori</h2>
+                        <h3 id="browser">Browser</h3>
+                        <h3 id="motori">Motori</h3>
+                        <h3 id="contesto-browser">Contesto Browser</h3>
+                        <h3 id="prestazioni">Prestazioni</h3>
+                    </div>
+                    <div>
+                        <h2 id="sviluppo-strumenti">Sviluppo e Strumenti (DevOps e Processo)</h2>
+                        <h3 id="strumenti-metodi">Strumenti e Metodi</h3>
+                        <h3 id="testing-debug">Testing & Debug</h3>
+                        <h3 id="strutture-informatiche">Strutture Informatiche</h3>
+                    </div>
+                    <div>
 
-                <h2 id="architettura-web">Architettura Web e Reti (Networking)</h2>
-                <p id="protocolli-web">Protocolli Web</p>
-                <p id="internet-rete">Internet & Rete</p>
-                <p id="comunicazione-dati">Comunicazione & Dati</p>
-                <p id="sicurezza-reti">Sicurezza delle Reti</p>
+                    </div>
 
-                <h2 id="sicurezza">Sicurezza (Cryptography e Web Security)</h2>
-                <p id="criptografia-algoritmi">Criptografia & Algoritmi</p>
-                <p id="protocolli-sicuri">Protocolli Sicuri</p>
-                <p id="vulnerabilita-web">Vulnerabilità Web</p>
-                <p id="gestione-accessi">Gestione Accessi</p>
+                    <h2 id="acronimi-terminologia">Acronimi e Terminologia Specifica</h2>
+                    <h3 id="acronimi-rilevanti">Acronimi Rilevanti</h3>
 
-                <h2>Front-End Development e Design (HTML, CSS, JavaScript)</h2>
-                <p>Markup & Struttura</p>
-                <p>Stile & Layout (CSS)</p>
-                <p>Interattività & Scripting</p>
-                <p>User Interface (UI/UX)</p>
-                <p>Grafica & Media</p>
+                    <h2 id="tipografia-contenuti">Tipografia e Contenuti (Accessibilità e Media)</h2>
+                    <h3 id="tipografia">Tipografia</h3>
+                    <h3 id="accessibilita">Accessibilità</h3>
+                    <h3 id="geolocalizzazione">Geolocalizzazione</h3>
 
-                <h2>Browser e Motori</h2>
-                <p>Browser</p>
-                <p>Motori</p>
-                <p>Contesto Browser</p>
-                <p>Prestazioni</p>
-
-                <h2>Sviluppo e Strumenti (DevOps e Processo)</h2>
-                <p>Strumenti e Metodi</p>
-                <p>Testing & Debug</p>
-                <p>Strutture Informatiche</p>
-
-                <h2>Acronimi e Terminologia Specifica</h2>
-                <p>Acronimi Rilevanti</p>
-
-                <h2>Tipografia e Contenuti (Accessibilità e Media)</h2>
-                <p>Tipografia</p>
-                <p>Accessibilità</p>
-                <p>Geolocalizzazione</p>
-
-                <h2>Cloud, Database e Strutture Dati</h2>
-                <p>Cloud & DB</p>
-                <p>Dati & Storage</p>
+                    <h2 id="cloud-database">Cloud, Database e Strutture Dati</h2>
+                    <h3 id="cloud-db">Cloud & DB</h3>
+                    <h3 id="dati-storage">Dati & Storage</h3>
+                </div>
             </main>
             
         </div>

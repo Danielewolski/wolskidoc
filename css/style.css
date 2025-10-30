@@ -1,8 +1,14 @@
-h1,h2,h3,h4,h5,h6{font-family:Poppins,sans-serif;color:#252930;font-weight:600}
 body{font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; padding-top: 67px;}
+h1,h2,h3,h4,h5,h6{font-family:Poppins,sans-serif;color:#252930;font-weight:600}
+p{color: #5d6778;font-size:1rem}
 .header{box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1); background-color: #fff; position: fixed; top: 0; left: 0; right: 0; width: 100%;}
 .version{padding: 0.25rem 0.5rem; background-color: #0d6efd; border-radius: 0.25rem; color: white; font-size: 0.75rem}
+.header-inner {min-height: 60px;display: flex;align-items: center;padding: 0 1.25rem;}
+.header-brand {text-decoration: none;margin-left: 1rem;}
 .main-container {display: flex; padding-top: 0.5rem;}
+.content {flex-grow: 1; padding: 0 2rem;}
+:target {scroll-margin-top: 67px;}
+
 .sidebar {
     width: 250px; /* Larghezza fissa della sidebar su desktop */
     flex-shrink: 0; /* Impedisce che la sidebar si restringa */
@@ -14,8 +20,6 @@ body{font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","No
     border-right: 1px solid #eee; /* Bordo di separazione */
 }
 .close-sidebar {display: none;}
-.content {flex-grow: 1; padding: 0 2rem;}
-
 .menu-toggle {
     display: none; /* Nascosto per default su desktop */
     background: none;
@@ -24,7 +28,6 @@ body{font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","No
     cursor: pointer;
     color: #252930;
 }
-
 @media (max-width: 992px) {
     
     .menu-toggle {
@@ -75,32 +78,21 @@ body{font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","No
     
 }
 
-.list-item a{
-    text-decoration: none;
-    color: #5d6778;
-    font-size: 1rem;
-    font-weight: 400; /* Testo più leggero */
-    line-height: 1.5;
-    /* Aggiunge l'indentazione per allineare sotto il sottotitolo */
-    padding-left: 10px; 
-}
-
-.list-item a:hover {
-    color: black; /* Un colore di evidenziazione */
-    cursor: pointer;
-}
-
 /* Stile dell'intestazione (il titolo cliccabile) */
 .accordion-header {
     display: flex; /* Permette all'icona di stare sulla destra */
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #5d6778;
     cursor: pointer;
     margin: 10px 0 10px 0;
     user-select: none; /* Impedisce la selezione del testo */
+}
+
+.accordion-header:hover{
+    color: black;
 }
 
 /* Stile dell'icona (+/-) */
@@ -116,7 +108,7 @@ body{font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","No
     /* Per default, il contenuto è nascosto. Verrà mostrato tramite JS e la classe 'open'. */
     max-height: 0;
     overflow: hidden; /* Nasconde il contenuto in eccesso quando max-height è 0 */
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animazione fluida */
+    /* transition: max-height 0.3s ease-out, padding 0.3s ease-out; */
 }
 
 /* Quando il contenuto è APERTO */
@@ -144,6 +136,10 @@ body{font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","No
     user-select: none;
 }
 
+.main-accordion-header:hover{
+    color: black;
+}
+
 .main-toggle-icon {
     font-size: 1.5em;
     font-weight: normal;
@@ -154,11 +150,25 @@ body{font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","No
 .main-accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out; /* Leggermente più lenta per l'elemento principale */
+    /* transition: max-height 0.4s ease-out; */
     padding-left: 10px;
 }
 
 .main-accordion-content.open {
     max-height: 2000px; /* Deve essere abbastanza grande da contenere TUTTO */
     padding: 0 0 20px 10px;
+}
+
+.list-item a{
+    text-decoration: none;
+    color: #5d6778;
+    font-size: 1rem;
+    font-weight: 400; /* Testo più leggero */
+    line-height: 1.5;
+    /* Aggiunge l'indentazione per allineare sotto il sottotitolo */
+    padding-left: 10px; 
+}
+
+.list-item a:hover {
+    color: black; /* Un colore di evidenziazione */
 }

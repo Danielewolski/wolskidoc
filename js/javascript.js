@@ -240,7 +240,9 @@ const glossTerms = [
                 groups: [
                     {
                         category: "Logica & Linguaggi",
-                        terms: ["Algoritmo (Algorithm)", "Programmazione informatica (Computer Programming)", "Flusso di controllo (Control flow)", ]
+                        terms: ["Algoritmo (Algorithm)", "Programmazione informatica (Computer Programming)", "Flusso di controllo (Control flow)", 
+                            "Funzione (Function)", "Metodo (Method)",
+                        ]
                     },
                     {
                         category: "Dati & Strutture",

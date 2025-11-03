@@ -55,28 +55,28 @@
                         <div>
                             <h3 id="logica-linguaggi">Logica & Linguaggi</h3>
                             <div>
-                                <b>Algoritmo (Algorithm)</b>
+                                <h4 class="headertitle">Algoritmo (Algorithm)</h4>
                                 <p>Un <b>algoritmo</b> è una serie di istruzioni per eseguire una funzione.</p>
                                 <p>In altre parole, un algoritmo è un mezzo per descrivere un modo per risolvere un problema in modo che possa essere risolto ripetutamente, da esseri umani o macchine. Gli informatici confrontano l'efficienza degli algoritmi attraverso il concetto di "complessità algoritmica (Algorithmic Complexity)" o notazione "Big O"</p>
                             </div>
                             <hr>
                             <div>
-                                <b>Programmazione informatica (Computer Programming)</b>
+                                <h4 class="headertitle">Programmazione informatica (Computer Programming)</h4>
                                 <p><b>La programmazione informatica</b> è il processo di composizione e organizzazione di un insieme di istruzioni. Queste istruzioni indicano a un programma informatico/software cosa fare in un linguaggio comprensibile al computer. Queste istruzioni sono disponibili in molti linguaggi diversi, come C++, Java, JavaScript, HTML, Python, Ruby e Rust.</p>
                                 <p>Utilizzando un linguaggio appropriato, è possibile programmare/creare qualsiasi tipo di software. Ad esempio, un programma che aiuta gli scienziati con calcoli complessi, un database che memorizza enormi quantità di dati, un sito web che consente di scaricare musica o un software di animazione che consente di creare filmati animati.</p>
                             </div>
                             <hr>
                             <div>
-                                <b>Flusso di controllo (Control flow)</b>
+                                <h4 class="headertitle">Flusso di controllo (Control flow)</h4>
                                 <p><b>Il flusso di controllo</b> è l'ordine in cui il computer esegue le istruzioni in uno script.</p>
                                 <p>Il codice viene eseguito in ordine dalla prima all'ultima riga del file, a meno che il computer non si imbatta in strutture (estremamente frequenti) che modificano il flusso di controllo, come istruzioni condizionali e cicli.</p>
                             </div>
                             <hr>
                             <div>
-                                <b>Funzione (Function)</b>
+                                <h4 class="headertitle">Funzione (Function)</h4>
                                 <p>Una <b>funzione</b> è un frammento di codice che può essere richiamato da altro codice o da se stessa, oppure da una variabile che fa riferimento alla funzione. Quando una funzione viene richiamata, gli argomenti vengono passati alla funzione come input e la funzione può facoltativamente restituire un valore. Una funzione in JavaScript è anche un oggetto.</p>
                                 <p>Un nome di funzione è un identificatore incluso come parte di una dichiarazione o espressione di funzione. L' ambito del nome di funzione dipende dal fatto che il nome di funzione sia una dichiarazione o un'espressione.</p>
-                                <p style="color: black; font-weight: 400; margin-bottom: 0;">Different types of functions</p>
+                                <h5 class="subtitle">Different types of functions</h5>
                                 <p>Una <b>funzione anonima (anonymous function)</b> è una funzione senza un nome. Solo le espressioni di funzione possono essere anonime, mentre le dichiarazioni di funzione devono avere un nome:</p>
                                 <div class="docs-code-block">
 <pre><code class="hljs"><span class="hljs-addition">// Anonymous function created as a function expression</span>
@@ -142,7 +142,50 @@
                             </div>
                             <hr>
                             <div>
-                                <b>Metodo (Method)</b>
+                                <h4 class="headertitle">IIFE</h4>
+                                <p>Una <b>IIFE (Immediately Invoked Function Expression)</b> è un'espressione idiomatica in cui una funzione JavaScript viene eseguita non appena definita. È anche nota come funzione anonima auto-eseguibile.</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-addition">// standard IIFE</span>
+(<span class="hljs-section">function</span> () {
+    <span class="hljs-addition">// statements</span>
+})();
+
+<span class="hljs-addition">// arrow function variant</span>
+(() => {
+    <span class="hljs-addition">// statements</span>
+})();
+
+<span class="hljs-addition">// async IIFE</span>
+(<span class="hljs-section">async </span> () => {
+    <span class="hljs-addition">// statements</span>
+})();</code></pre>
+                                </div>
+                                <strong>Contiene due parti principali:</strong>
+                                <ol style="margin-top: 0">
+                                    <li>
+                                        <span>Un'<u>espressione di funzione</u>. Solitamente deve essere <u>racchiusa tra parentesi</u> per essere analizzata correttamente.</span>
+                                    </li>
+                                    <li>
+                                        <span><i>Chiamata immediata</i> dell'espressione della funzione. È possibile fornire argomenti, sebbene le funzioni IIFE senza argomenti siano più comuni.</span>
+                                    </li>
+                                </ol>
+                                <p>Gli IIFE sono un pattern comune utilizzato per eseguire un numero arbitrario di istruzioni nel proprio ambito (ed eventualmente restituire un valore), in una posizione che richiede una singola espressione. Sono simili, ma molto più potenti, dell'operatore virgola , che può eseguire solo più espressioni e, pertanto, non fornisce un modo per utilizzare variabili locali o istruzioni di controllo del flusso.</p>
+                                <strong>I casi d'uso degli IIFE includono:</strong>
+                                <ul style="margin-top: 0">
+                                    <li>
+                                        <span>Evitare di contaminare lo spazio dei nomi globale creando un nuovo <u>ambito</u>.</span>
+                                    </li>
+                                    <li>
+                                        <span>Creazione di un nuovo contesto asincrono da utilizzare <u>await</u> in un contesto non asincrono.</span>
+                                    </li>
+                                    <li>
+                                        <span>Calcolo di valori con logica complessa, ad esempio utilizzando più istruzioni come un'unica espressione.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Metodo (Method)</h4>
                                 <p>Un <b>metodo</b> è una funzione che rappresenta una proprietà di un oggetto. Esistono due tipi di metodi: <u>metodi di istanza</u>, che sono attività predefinite eseguite da un'istanza di oggetto, e <u>metodi statici</u>, che sono attività chiamate direttamente da un costruttore di oggetto.</p>
                                 <div class="callout-block callout-block-info">
                                     <div class="content">
@@ -153,7 +196,7 @@
                             </div>
                             <hr>
                             <div>
-                                <b>Argomento (Argument)</b>
+                                <h4 class="headertitle">Argomento (Argument)</h4>
                                 <p>Gli <b>argomenti</b> sono valori (primitivi o oggetti) passati come input a una funzione. Non confondere gli argomenti con i parametri, che sono i nomi utilizzati nella definizione della funzione per fare riferimento agli argomenti.</p>
                                 <div class="docs-code-block">
 <pre><code class="hljs"><span class="hljs-section">const</span> argument1 = <span class="hljs-addition">"Web"</span>;
@@ -162,7 +205,7 @@
 
 <span class="hljs-addition">// This function takes two values</span>
 <span class="hljs-section">function</span> <span class="hljs-variable-language">example</span>(parameter1, parameter2) {
-    console.<span class="hljs-variable-language">log</span>(parameter1); <span class="hljs-addition">// Output = "Web</span>
+    console.<span class="hljs-variable-language">log</span>(parameter1); <span class="hljs-addition">// Output = "Web"</span>
     console.<span class="hljs-variable-language">log</span>(parameter2); <span class="hljs-addition">// Output = "Development"</span>
 }</code></pre>
                                 </div>
@@ -172,10 +215,106 @@
 <span class="hljs-section">const</span> argument2 = [<span class="hljs-addition">1</span>, <span class="hljs-addition">2</span>, <span class="hljs-addition">3</span>];
 <span class="hljs-variable-language">example</span>(argument1, argument2); <span class="hljs-addition">// passing two arguments</span>
 
-</code></pre>
-
+<span class="hljs-addition">// This function takes a single value, so the second argument passed is ignored</span>
+<span class="hljs-section">function</span> <span class="hljs-variable-language">example</span>(parameter) {
+    console.<span class="hljs-variable-language">log</span>(parameter); <span class="hljs-addition">// Output = "foo"</span>
+}</code></pre>
                             </div>
                             <hr>
+                            <div>
+                                <h4 class="headertitle">Parametro (Parameter)</h4>
+                                <p>I <b>parametri</b> sono variabili denominate dichiarate come parte di una funzione. Vengono utilizzate per fare riferimento agli argomenti passati alla funzione.</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-section">const</span> argument1 = <span class="hljs-addition">"Web"</span>;
+<span class="hljs-section">const</span> argument2 = <span class="hljs-addition">"Development"</span>;
+<span class="hljs-variable-language">example</span>(argument1, argument2); <span class="hljs-addition">// passing two arguments</span>
+
+<span class="hljs-addition">// This function takes two values</span>
+<span class="hljs-section">function</span> <span class="hljs-variable-language">example</span>(parameter1, parameter2) {
+    console.<span class="hljs-variable-language">log</span>(parameter1); <span class="hljs-addition">// Output = "Web"</span>
+    console.<span class="hljs-variable-language">log</span>(parameter2); <span class="hljs-addition">// Output = "Development"</span>
+}</code></pre>
+                                </div>                                
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Firma di funzione (Function signature)</h4>
+                                <p>Una <b>firma di funzione</b> (o firma di tipo o firma di metodo) definisce l'input e l'output di funzioni o metodi.</p>
+                                <strong>Una firma può includere:</strong>
+                                <ul style="margin-top: 0">
+                                    <li>
+                                        <span>Parametri e loro tipi</span>
+                                    </li>
+                                    <li>
+                                        <span>Un valore di ritorno e un tipo</span>
+                                    </li>
+                                    <li>
+                                        <span>Eccezioni che potrebbero essere generate o trasmesse indietro</span>
+                                    </li>
+                                    <li>
+                                        <span>Informazioni sulla disponibilità del metodo in un programma orientato agli oggetti (come le parole chiave public, static, o prototype).</span>
+                                    </li>
+                                </ul>
+                                <h5 class="subtitle">Firme in JavaScript</h5>
+                                <p><i>JavaScript</i> è un linguaggio <i>debolmente tipizzato o dinamico</i>. Ciò significa che non è necessario dichiarare il tipo di una variabile in anticipo. Il tipo verrà determinato automaticamente durante l'elaborazione del programma. Una firma in JavaScript può comunque fornire alcune informazioni sul metodo:</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-variable-language">MyObject</span>.prototype.<span class="hljs-variable-language">myFunction</span>(value);</code></pre>
+                                </div>
+                                <h5 class="subtitle">Firme in Java</h5>
+                                <p>In <i>Java</i>, le firme vengono utilizzate per identificare metodi e classi a livello del codice della macchina virtuale. È necessario dichiarare i tipi di variabili nel codice per poter eseguire il codice Java. Java è <i>strettamente tipizzato</i> e verifica la correttezza di tutti i parametri in fase di compilazione.</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-section">public static void</span> <span class="hljs-variable-language">main</span>(<span class="hljs-variable-language">String</span>[] args);</code></pre>
+                                </div>
+                                <ul style="margin-top: 0">
+                                    <li>
+                                        <span>La parola chiave <u>public</u> è un modificatore di accesso e indica che questo metodo può essere chiamato da qualsiasi oggetto.</span>
+                                    </li>
+                                    <li>
+                                        <span>La parola chiave <u>static</u> indica che questo metodo è un metodo di classe e non un metodo di istanza.</span>
+                                    </li>
+                                    <li>
+                                        <span>La parola chiave <u>void</u> indica che questo metodo non ha alcun valore di ritorno.</span>
+                                    </li>
+                                    <li>
+                                        <span>Il nome del metodo è <u>main</u>.</span>
+                                    </li>
+                                    <li>
+                                        <span>Il metodo accetta un parametro di tipo String Array. Si chiama <u>args</u>.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">API</h4>
+                                <p>Un'<b>API (Application Programming Interface)</b> è un insieme di funzionalità e regole presenti all'interno di un programma software (l'applicazione) che consentono l'interazione con esso tramite software, a differenza di un'interfaccia utente umana. L' API può essere vista come un semplice contratto (l'interfaccia) tra l'applicazione che la offre e altri elementi, come software o hardware di terze parti.</p>
+                                <p>Nello sviluppo Web, un'API è generalmente un insieme di funzionalità di codice (ad esempio metodi, proprietà, eventi e URL) che uno sviluppatore può utilizzare nelle proprie app per interagire con i componenti del browser Web di un utente, altri software/hardware sul computer dell'utente o siti Web e servizi di terze parti.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Tipo (Type)</h4>
+                                <p>Il <b>tipo</b> è una caratteristica di un valore che influenza il tipo di dati che può memorizzare e la struttura a cui i dati aderiranno. Ad esempio, un tipo di dato <u>booleano (Boolean)</u> può contenere solo un valore TRUE o FALSE. Mentre una <u>stringa (String)</u> può contenere una stringa o una sequenza di caratteri, un <u>numero (Number)</u> può contenere valori numerici di qualsiasi tipo e così via.</p>
+                                <p>Il tipo di dati di un valore influenza anche le operazioni valide su quel valore. Ad esempio, un valore di tipo numero può essere moltiplicato per un altro numero, ma non per una stringa, anche se questa contiene solo un numero, come la stringa "2".</p>
+                                <p>Se non si è sicuri del tipo di un valore, è possibile utilizzare l'operatore <i>typeof</i>.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Tipo coercizione (Type coercion)</h4>
+                                <p>La <b>coercizione di tipo</b> è la conversione automatica o implicita di valori da un tipo di dati a un altro (ad esempio, stringhe in numeri). La conversione di tipo è simile alla coercizione di tipo perché entrambe convertono i valori da un tipo di dati a un altro, con una differenza fondamentale: la coercizione di tipo è implicita, mentre la conversione di tipo può essere implicita o esplicita.</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-section">const</span> value1 = <span class="hljs-addition">"5"</span>;
+<span class="hljs-section">const</span> value2 = <span class="hljs-addition">9</span>;
+<span class="hljs-section">let</span> sum = value1 + value2;
+
+console.<span class="hljs-variable-language">log</span>(sum);</code></pre>
+                                </div>
+                                <p>
+                                   Nell'esempio precedente, JavaScript ha convertito il numero 9 in una stringa e poi ha concatenato i due valori, ottenendo una stringa "59". JavaScript poteva scegliere tra una stringa o un numero e ha deciso di utilizzare una stringa. 
+                                </p>
+                                <p>Il compilatore avrebbe potuto convertire il 5 in un numero e restituire la somma di 14, ma non l'ha fatto. Per restituire questo risultato, avresti dovuto convertire esplicitamente il 5 in un numero utilizzando il metodo <i>Number()</i>:</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs">sum = <span class="hljs-variable-language">Number</span>(value1) + value2;</code></pre>
+                                </div>
+                            </div>
                         </div>
                         <h3 id="dati-strutture">Dati & Strutture</h3>
                         <h3 id="contesto-ambito">Contesto & Ambito</h3>

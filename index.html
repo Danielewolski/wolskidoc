@@ -79,21 +79,21 @@
                                 <h5 class="subtitle">Different types of functions</h5>
                                 <p>Una <b>funzione anonima (anonymous function)</b> è una funzione senza un nome. Solo le espressioni di funzione possono essere anonime, mentre le dichiarazioni di funzione devono avere un nome:</p>
                                 <div class="docs-code-block">
-<pre><code class="hljs"><span class="hljs-addition">// Anonymous function created as a function expression</span>
+<pre><code class="hljs"><span class="hljs-comment">// Anonymous function created as a function expression</span>
 (<span class="hljs-section">function</span>) () {});
 
-<span class="hljs-addition">// Anonymous function created as an arrow function</span>
+<span class="hljs-comment">// Anonymous function created as an arrow function</span>
 <span class="hljs-punctuation">() => {};</span></code></pre>
                                 </div>
                                 <p class="ptitle">Una <b>funzione denominata (named function)</b> è una funzione con un nome di funzione:</p>
                                 <div class="docs-code-block">
-<pre><code class="hljs"><span class="hljs-addition">// Function declaration</span>
+<pre><code class="hljs"><span class="hljs-comment">// Function declaration</span>
 <span class="hljs-section">function</span> <span class="hljs-variable-language">foo</span>() {};
 
-<span class="hljs-addition">// Named function expression</span>
+<span class="hljs-comment">// Named function expression</span>
 (<span class="hljs-section">function</span> <span class="hljs-variable-language">bar</span>() {})</span>
 
-<span class="hljs-addition">// Arrow function</span>
+<span class="hljs-comment">// Arrow function</span>
 <span class="hljs-section">const</span> <span class="hljs-variable-language">baz</span> = () => {};</code></pre>
                                 </div>
                                 <p class="ptitle">Una <b>funzione interna (inner function)</b> è una funzione all'interno di un'altra funzione (squarein questo caso). Una <b>funzione esterna (outer function)</b> è una funzione che contiene una funzione (addSquaresin questo caso):</p>
@@ -105,7 +105,7 @@
     <span class="hljs-section">return</span> <span class="hljs-variable-language">square</span>(a) + <span class="hljs-variable-language">square</span>(b)
 }
 
-<span class="hljs-addition">// Arrow function</span>
+<span class="hljs-comment">// Arrow function</span>
 <span class="hljs-section">const</span> <span class="hljs-variable-language">addSquares2</span> = (a, b) => {
     <span class="hljs-section">const</span> <span class="hljs-variable-language">square</span> = (x) => x * x;
     <span class="hljs-section">return</span> <span class="hljs-variable-language">square</span> (a) + <span class="hljs-variable-language">square</span>(b);
@@ -118,7 +118,7 @@
     <span class="hljs-variable-language">loop2</span>(x + <span class="hljs-addition">1</span>);
 }
 
-<span class="hljs-addition">// Arrow function</span>
+<span class="hljs-comment">// Arrow function</span>
 <span class="hljs-section">function</span> <span class="hljs-variable-language">loop2</span> = (x) => {
     <span class="hljs-section">if</span> (x >= <span class="hljs-addition">10</span>) <span class="hljs-section">return</span>;
     <span class="hljs-variable-language">loop2</span>(x + <span class="hljs-addition">1</span>);
@@ -145,19 +145,19 @@
                                 <h4 class="headertitle">IIFE</h4>
                                 <p>Una <b>IIFE (Immediately Invoked Function Expression)</b> è un'espressione idiomatica in cui una funzione JavaScript viene eseguita non appena definita. È anche nota come funzione anonima auto-eseguibile.</p>
                                 <div class="docs-code-block">
-<pre><code class="hljs"><span class="hljs-addition">// standard IIFE</span>
+<pre><code class="hljs"><span class="hljs-comment">// standard IIFE</span>
 (<span class="hljs-section">function</span> () {
-    <span class="hljs-addition">// statements</span>
+    <span class="hljs-comment">// statements</span>
 })();
 
-<span class="hljs-addition">// arrow function variant</span>
+<span class="hljs-comment">// arrow function variant</span>
 (() => {
-    <span class="hljs-addition">// statements</span>
+    <span class="hljs-comment">// statements</span>
 })();
 
-<span class="hljs-addition">// async IIFE</span>
+<span class="hljs-comment">// async IIFE</span>
 (<span class="hljs-section">async </span> () => {
-    <span class="hljs-addition">// statements</span>
+    <span class="hljs-comment">// statements</span>
 })();</code></pre>
                                 </div>
                                 <strong>Contiene due parti principali:</strong>
@@ -201,23 +201,23 @@
                                 <div class="docs-code-block">
 <pre><code class="hljs"><span class="hljs-section">const</span> argument1 = <span class="hljs-addition">"Web"</span>;
 <span class="hljs-section">const</span> argument2 = <span class="hljs-addition">"Development"</span>;
-<span class="hljs-variable-language">example</span>(argument1, argument2); <span class="hljs-addition">// passing two arguments</span>
+<span class="hljs-variable-language">example</span>(argument1, argument2); <span class="hljs-comment">// passing two arguments</span>
 
-<span class="hljs-addition">// This function takes two values</span>
+<span class="hljs-comment">// This function takes two values</span>
 <span class="hljs-section">function</span> <span class="hljs-variable-language">example</span>(parameter1, parameter2) {
-    console.<span class="hljs-variable-language">log</span>(parameter1); <span class="hljs-addition">// Output = "Web"</span>
-    console.<span class="hljs-variable-language">log</span>(parameter2); <span class="hljs-addition">// Output = "Development"</span>
+    console.<span class="hljs-variable-language">log</span>(parameter1); <span class="hljs-comment">// Output = "Web"</span>
+    console.<span class="hljs-variable-language">log</span>(parameter2); <span class="hljs-comment">// Output = "Development"</span>
 }</code></pre>
                                 </div>
                                 <p class="ptitle">L'ordine degli argomenti all'interno della chiamata di funzione dovrebbe essere lo stesso dell'ordine dei parametri nella definizione della funzione.</p>
                                 <div class="docs-code-block">
 <pre><code class="hljs"><span class="hljs-section">const</span> argument1 = <span class="hljs-addition">"foo"</span>;
 <span class="hljs-section">const</span> argument2 = [<span class="hljs-addition">1</span>, <span class="hljs-addition">2</span>, <span class="hljs-addition">3</span>];
-<span class="hljs-variable-language">example</span>(argument1, argument2); <span class="hljs-addition">// passing two arguments</span>
+<span class="hljs-variable-language">example</span>(argument1, argument2); <span class="hljs-comment">// passing two arguments</span>
 
-<span class="hljs-addition">// This function takes a single value, so the second argument passed is ignored</span>
+<span class="hljs-comment">// This function takes a single value, so the second argument passed is ignored</span>
 <span class="hljs-section">function</span> <span class="hljs-variable-language">example</span>(parameter) {
-    console.<span class="hljs-variable-language">log</span>(parameter); <span class="hljs-addition">// Output = "foo"</span>
+    console.<span class="hljs-variable-language">log</span>(parameter); <span class="hljs-comment">// Output = "foo"</span>
 }</code></pre>
                             </div>
                             <hr>
@@ -227,12 +227,12 @@
                                 <div class="docs-code-block">
 <pre><code class="hljs"><span class="hljs-section">const</span> argument1 = <span class="hljs-addition">"Web"</span>;
 <span class="hljs-section">const</span> argument2 = <span class="hljs-addition">"Development"</span>;
-<span class="hljs-variable-language">example</span>(argument1, argument2); <span class="hljs-addition">// passing two arguments</span>
+<span class="hljs-variable-language">example</span>(argument1, argument2); <span class="hljs-comment">// passing two arguments</span>
 
-<span class="hljs-addition">// This function takes two values</span>
+<span class="hljs-comment">// This function takes two values</span>
 <span class="hljs-section">function</span> <span class="hljs-variable-language">example</span>(parameter1, parameter2) {
-    console.<span class="hljs-variable-language">log</span>(parameter1); <span class="hljs-addition">// Output = "Web"</span>
-    console.<span class="hljs-variable-language">log</span>(parameter2); <span class="hljs-addition">// Output = "Development"</span>
+    console.<span class="hljs-variable-language">log</span>(parameter1); <span class="hljs-comment">// Output = "Web"</span>
+    console.<span class="hljs-variable-language">log</span>(parameter2); <span class="hljs-comment">// Output = "Development"</span>
 }</code></pre>
                                 </div>                                
                             </div>
@@ -319,7 +319,112 @@ console.<span class="hljs-variable-language">log</span>(sum);</code></pre>
                             <div>
                                 <h4 class="headertitle">Conversione di tipo (Type conversion)</h4>
                                 <p>La <b>conversione di tipo (o typecasting)</b> significa il trasferimento di dati da un tipo di dati a un altro. La conversione implicita avviene quando il compilatore (per i linguaggi compilati) o il runtime (per i linguaggi di scripting come JavaScript ) converte automaticamente i tipi di dati. Il codice sorgente può anche richiedere esplicitamente che venga eseguita una conversione.</p>
+                                <p>Ad esempio, data l'espressione <i>"foo" + 1</i>, il numero <i>1</i> viene convertito implicitamente in una stringa e l'espressione restituisce <i>"foo1"</i>. Data l'istruzione <i>Number("0x11")</i>, la stringa <i>"0x11"</i> viene convertita esplicitamente in numero.</p>
                             </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Tipizzazione statica (Static typing)</h4>
+                                <p>Un linguaggio <b>staticamente tipizzato</b> è un linguaggio (come Java, C o C++) in cui i tipi delle variabili sono noti in fase di compilazione. Nella maggior parte di questi linguaggi, i tipi devono essere espressamente indicati dal programmatore; in altri casi (come OCaml), l'inferenza di tipo consente al programmatore di non indicare i tipi delle variabili.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Tipizzazione dinamica (Dynamic typing)</h4>
+                                <p>I linguaggi a <b>tipizzazione dinamica</b> sono quelli (come JavaScript ) in cui l'interprete assegna un tipo alle variabili in fase di esecuzione in base al valore della variabile in quel momento.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Sintassi (Syntax)</h4>
+                                <p>La <b>sintassi</b> specifica la combinazione e la sequenza di <i>caratteri</i> richieste per costituire un codice correttamente strutturato. La sintassi generalmente include la grammatica e le regole che si applicano alla sua scrittura, come i requisiti di indentazione in Python.</p>
+                                <p>La sintassi varia da linguaggio a linguaggio (ad esempio, la sintassi è diversa in HTML e JavaScript). Sebbene i linguaggi possano condividere poche somiglianze in termini di sintassi, ad esempio la regola <i>"operando operatore operando"</i> in JavaScript e Python, ciò non significa che i due linguaggi condividano somiglianze sintattiche.</p>
+                                <p>La sintassi si applica sia ai linguaggi di programmazione (comandi al computer) sia ai linguaggi di markup (informazioni sulla struttura del documento).</p>
+                                <p>La sintassi regola solo l'ordinamento e la struttura; le istruzioni devono anche essere significative, e questo è compito della <i>semantica</i>.</p>
+                                <p>Il codice deve avere una sintassi corretta per poter <i>essere compilato</i> correttamente, altrimenti si verifica un <i>errore di sintassi</i>. Anche piccoli errori, come una parentesi mancante, possono impedire la corretta compilazione del codice sorgente.</p>
+                                <p>Si dice che i framework abbiano una sintassi "pulita" se producono risultati semplici, leggibili e concisi. Se una base di codice utilizza "molta sintassi", richiede più caratteri per ottenere la stessa funzionalità.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Errore di sintassi (Syntax error)</h4>
+                                <p>Un'eccezione viene causata <b>dall'uso errato di una sintassi predefinita</b>. Gli errori di sintassi vengono rilevati durante la compilazione o l'analisi del codice sorgente.</p>
+                                <p>Ad esempio, se si omette una parentesi graffa di chiusura <i>( &#125;)</i> quando si definisce una funzione JavaScript , si genera un errore di sintassi. Gli strumenti di sviluppo del browser visualizzano gli errori di sintassi JavaScript e CSS nella console.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Dichiarazione (Statement)</h4>
+                                <p>In un linguaggio di programmazione, un'istruzione è una riga di codice che comanda un'attività. Ogni programma è costituito da una sequenza di istruzioni. <i>(Esempio: Assegnare un valore a una variabile)</i></p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Costante (Constant)</h4>
+                                <p>Una <b>costante</b> è un dato il cui valore non cambia durante l'esecuzione di un programma, a differenza delle variabili che possono essere modificate. È una porzione di memoria con un valore fisso, che può essere un numero, un carattere o una stringa, e spesso viene utilizzata per valori matematici come pi greco o per rappresentare impostazioni che non devono essere cambiate.</p>
+                                <p><b>Distinzione dalle variabili:</b> La differenza principale è che le costanti hanno un valore fisso e immutabile, mentre le variabili possono cambiare valore durante l'esecuzione del programma.</p>
+
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Variabile (Variable)</h4>
+                                <p>Una <b>variabile</b> è un'area di memoria che contiene dati modificabili, identificata da un nome (identificatore). Può essere pensata come una "scatola" etichettata che conserva valori, come numeri, testo o valori logici, che possono cambiare durante l'esecuzione di un programma.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Parola chiave (Keyword)</h4>
+                                <p>Una <b>parola chiave</b> è una parola o una frase che descrive un contenuto. Le parole chiave online vengono utilizzate come query per i motori di ricerca o come parole che identificano il contenuto sui siti web.</p>
+                                <p>Quando si utilizza un motore di ricerca, si utilizzano parole chiave per specificare ciò che si sta cercando e il motore di ricerca restituisce pagine web pertinenti. Per risultati più accurati, si consiglia di provare parole chiave più specifiche, come "Blue Mustang GTO" anziché "Mustang". Le pagine web utilizzano anche parole chiave in un meta tag (nella &lt;head&gt; sezione) per descrivere il contenuto della pagina, in modo che i motori di ricerca possano identificarle e organizzarle meglio.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Letterale (Literal)</h4>
+                                <p>Il <b>letterale</b> è un valore scritto direttamente nel codice sorgente (es. 10, "ciao", 3.14). Viene utilizzato per rappresentare un valore specifico e statico nel codice.</p>
+                                <h5 class="subtitle">Esempi di letterali:</h5>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-comment">// Array literals</span>
+<span class="hljs-section">const</span> coffees = [<span class="hljs-addition">"French Roast"</span>, <span class="hljs-addition">"Kona"</span>];
+
+<span class="hljs-comment">// Boolean literals</span>
+Può assumere solo TRUE o FALSE (Risultato condizione if)
+
+<span class="hljs-comment">// Object literals</span>
+<span class="hljs-section">let</span> utente = {
+  nome: <span class="hljs-addition">"John"</span>,
+  eta: 30
+};
+<span class="hljs-comment">// RegExp literals</span>
+<span class="hljs-section">const</span> re = /ab+c/;
+
+<span class="hljs-comment">// String literals</span>
+<span class="hljs-addition">'foo'</span> or <span class="hljs-addition">"bar"</span>
+
+<span class="hljs-comment">// Numeric literals</span>
+    <span class="hljs-comment">// Integer</span>
+    10
+    -25
+    0
+    <span class="hljs-comment">// Decimal (Floating-point literals)</span>
+    3.1415926
+    .123456789
+    3.1E+12
+    .1e-23
+    <span class="hljs-comment">// Complex</span>
+    5 + 2j
+    7 - 3j</code></pre>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Simbolo (Symbol)</h4>
+                                <p>Un simbolo è un tipo di dato che rappresenta identificatori univoci e non falsificabili. A volte vengono chiamati atomi.</p>
+                                <p>Poiché un simbolo è univoco e non falsificabile, è possibile leggere il valore di una proprietà associata a un simbolo solo se si dispone di un riferimento all'identificatore originale.</p>
+                                <p>In JavaScript, symbol è uno dei tipi primitivi e può essere creato utilizzando il metodo factory <i>Symbol()</i> che restituisce ogni volta un simbolo diverso. Possono essere utilizzati come chiavi per oggetti che non possono mai entrare in collisione accidentale con altre proprietà.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Identificatore (Identifier)</h4>
+                                <p>Un <b>identificatore</b> è una sequenza di caratteri nel codice che identifica una variabile, una funzione o una proprietà. Nella maggior parte dei linguaggi, gli identificatori sono sensibili alle maiuscole e alle minuscole e non sono racchiusi tra virgolette.</p>
+                                <p>In <u>JavaScript</u>, gli identificatori possono contenere lettere <i>Unicode $ , , _e cifre (0-9)</i>, ma non possono iniziare con una cifra. Un identificatore differisce da una stringa in quanto una stringa è costituita da dati, mentre un identificatore è parte del codice. In JavaScript, non è possibile convertire gli identificatori in stringhe, ma a volte è possibile analizzare le stringhe in identificatori.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle"></h4>
+                            </div>                                                                                                                
                         </div>
                         <h3 id="dati-strutture">Dati & Strutture</h3>
                         <h3 id="contesto-ambito">Contesto & Ambito</h3>

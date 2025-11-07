@@ -241,7 +241,8 @@ const glossTerms = [
                     {
                         category: "Logica & Linguaggi",
                         terms: ["Algoritmo (Algorithm)", "Programmazione informatica (Computer Programming)", "Flusso di controllo (Control flow)", 
-                            "Funzione (Function)", "Metodo (Method)", "Argomento (Argument)", "Parametro (Parameter)"
+                            "Funzione (Function)", "IIFE", "Metodo (Method)", "Argomento (Argument)", "Parametro (Parameter)", "Firma di funzione (Function signature)",
+                            "API", "Tipo (Type)", "Tipo coercizione (Type coercion)",
                         ]
                     },
                     {

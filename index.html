@@ -509,9 +509,21 @@ obj.<span class="hljs-variable-language">display</span>();
                                 <h4 class="headertitle">Polimorfismo (Polymorphism)</h4>
                                 <p>Il <b>polimorfismo</b> in informatica è la capacità di un'espressione di assumere forme diverse, tipicamente nella programmazione orientata agli oggetti, dove consente a un oggetto di essere trattato come se fosse un tipo diverso, solitamente una sua superclasse comune. Ciò permette di scrivere codice più flessibile e riutilizzabile, poiché si possono chiamare metodi su oggetti diversi e il sistema saprà eseguire l'implementazione corretta per il tipo specifico dell'oggetto.</p>
                                 <div style="text-align: center;">
-                                    <img src="polimorfismo.webp"></img>
-
+                                    <img style="width: 60%" src="polimorfismo.webp"></img>
                                 </div>
+                                <strong>Esempio pratico</strong>
+                                <p>Immagina di avere una superclasse FiguraGeometrica con un metodo disegna().</p>
+                                <ol style="margin-top: 0">
+                                    <li>
+                                        <span>Le sottoclassi come <u>Cerchio</u>, <u>Rettangolo</u> e <u>Linea</u> erediteranno questo metodo.</span>
+                                    </li>
+                                    <li>
+                                        <span>Ogni sottoclasse implementerà il proprio metodo <u>disegna()</u> in modo specifico (ad esempio, <u>Cerchio</u> disegnerà un cerchio, <u>Rettangolo</u> un rettangolo).</span>
+                                    </li>
+                                    <li>
+                                        <span>Utilizzando il polimorfismo, puoi avere una collezione di <u>FiguraGeometrica</u> e chiamare il metodo <u>disegna()</u> su ciascun elemento. Il sistema eseguirà automaticamente il metodo corretto per ogni oggetto, senza che tu debba preoccuparti di che tipo di figura sia.</span>
+                                    </li>
+                                </ol>
                             </div>
                             <hr>
                             <div>

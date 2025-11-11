@@ -451,19 +451,67 @@ Può assumere solo TRUE o FALSE (Risultato condizione if)
                             </div>
                             <hr>
                             <div>
-                                <h4 class="headertitle"></h4>
+                                <h4 class="headertitle">Astrazione (Abstraction)</h4>
+                                <p><b>L'astrazione</b> nella programmazione informatica è un modo per ridurre la complessità e consentire una progettazione e un'implementazione efficienti in sistemi software complessi. Nasconde la complessità tecnica dei sistemi dietro API più semplici.</p>
+                                <strong>Vantaggi dell'astrazione dei dati</strong>
+                                <ul style="margin-top: 0">
+                                    <li>
+                                        <span>Aiuta l'utente a evitare di scrivere codice di basso livello.</span>
+                                    </li>
+                                    <li>
+                                        <span>Evita la duplicazione del codice e aumenta la riutilizzabilità.</span>
+                                    </li>
+                                    <li>
+                                        <span>Può modificare l'implementazione interna di una classe in modo indipendente senza influire sull'utente.</span>
+                                    </li>
+                                    <li>
+                                        <span>Contribuisce ad aumentare la sicurezza di un'applicazione o di un programma poiché all'utente vengono forniti solo i dettagli importanti.</span>
+                                    </li>
+                                </ul>
+                                <h5 class="subtitle">Esempio:</h5>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-section">class</span> <span class="hljs-variable-language">ImplementAbstraction</span> {
+    <span class="hljs-comment">// method to set values of internal members</span>
+    <span class="hljs-variable-language">set</span>(x, y) {
+        <span class="hljs-section">this</span>.a = x;
+        <span class="hljs-section">this</span>.b = y;
+    }
+
+    <span class="hljs-variable-language">display</span>() {
+        console.<span class="hljs-variable-language">log</span>('a = ${<span class="hljs-section">this</span>.a}')
+        console.<span class="hljs-variable-language">log</span>('b = ${<span class="hljs-section">this</span>.b}')
+    }
+}
+
+<span class="hljs-section">const</span> obj = <span class="hljs-section">new</span> <span class="hljs-variable-language">ImplementAbstraction</span>();
+obj.<span class="hljs-variable-language">set</span>(<span class="hljs-addition">10</span>,<span class="hljs-addition">20</span>);
+obj.<span class="hljs-variable-language">display</span>();
+<span class="hljs-comment">// a = 10</span>
+<span class="hljs-comment">// b = 20</span></code></pre>
+                                </div>
                             </div>
                             <hr>
                             <div>
-                                <h4 class="headertitle"></h4>
+                                <h4 class="headertitle">Incapsulamento (Encapsulation)</h4>
+                                <p><b>L'incapsulamento</b> è un concetto fondamentale in informatica che si riferisce a due aspetti: nella programmazione orientata agli oggetti, consiste nel raggruppare dati (attributi) e metodi (funzioni) in un'unica unità (la classe) e nel limitare l'accesso esterno a questi dati.</p>
+                                <p><b>"Protezione dei dati"</b> Limita l'accesso diretto ai dati (solitamente rendendoli privati) e impone l'uso di metodi pubblici (getter e setter) per accedervi o modificarli. Questo impedisce modifiche non autorizzate e garantisce l'integrità dei dati.</p>
+                                <p><b>"Black box"</b> Permette di trattare gli oggetti come "scatole nere", dove si interagisce solo attraverso l'interfaccia pubblica (i metodi), senza doversi preoccupare dei dettagli interni di implementazione.</p>
+                                <p><b>Vantaggi:</b> Migliora la modularità, la manutenibilità e la robustezza del codice. Le modifiche all'implementazione interna non influiscono sulle altre parti del sistema. </p>
                             </div>
                             <hr>
                             <div>
-                                <h4 class="headertitle"></h4>
+                                <h4 class="headertitle">Eredità (Inheritance)</h4>
+                                <p><b>L'ereditarietà</b> è una caratteristica fondamentale della programmazione orientata agli oggetti. L'astrazione dei dati può essere estesa a diversi livelli, ovvero le classi possono avere superclassi e sottoclassi.</p>
+                                <p>Come sviluppatore di app, puoi scegliere quali attributi e metodi della superclasse mantenere e aggiungerne di tuoi, rendendo la definizione della classe molto flessibile. Alcuni linguaggi consentono a una classe di ereditare da più di un genitore (ereditarietà multipla).</p>
                             </div>
                             <hr>
                             <div>
-                                <h4 class="headertitle"></h4>
+                                <h4 class="headertitle">Polimorfismo (Polymorphism)</h4>
+                                <p>Il <b>polimorfismo</b> in informatica è la capacità di un'espressione di assumere forme diverse, tipicamente nella programmazione orientata agli oggetti, dove consente a un oggetto di essere trattato come se fosse un tipo diverso, solitamente una sua superclasse comune. Ciò permette di scrivere codice più flessibile e riutilizzabile, poiché si possono chiamare metodi su oggetti diversi e il sistema saprà eseguire l'implementazione corretta per il tipo specifico dell'oggetto.</p>
+                                <div style="text-align: center;">
+                                    <img src="polimorfismo.webp"></img>
+
+                                </div>
                             </div>
                             <hr>
                             <div>

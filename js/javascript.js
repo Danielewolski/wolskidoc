@@ -242,7 +242,15 @@ const glossTerms = [
                         category: "Logica & Linguaggi",
                         terms: ["Algoritmo (Algorithm)", "Programmazione informatica (Computer Programming)", "Flusso di controllo (Control flow)", 
                             "Funzione (Function)", "IIFE", "Metodo (Method)", "Argomento (Argument)", "Parametro (Parameter)", "Firma di funzione (Function signature)",
-                            "API", "Tipo (Type)", "Tipo coercizione (Type coercion)",
+                            "API", "Tipo (Type)", "Tipo coercizione (Type coercion)", "Conversione di tipo (Type conversion)", "Tipizzazione statica (Static typing)",
+                            "Tipizzazione dinamica (Dynamic typing)", "Sintassi (Syntax)", "Errore di sintassi (Syntax error)", "Dichiarazione (Statement)",
+                            "Costante (Constant)", "Variabile (Variable)", "Parola chiave (Keyword)", "Letterale (Literal)", "Simbolo (Symbol)", "Identificatore (Identifier)",
+                            "Interpolazione (Interpolation)", "Compilazione (Compile)", "Tempo di compilazione (Compile time)", "Compilazione Just-In-Time (JIT)",
+                            "Interprete (Interpeter)", "Astrazione (Abstraction)", "Incapsulamento (Encapsulation)", "Eredità (Inheritance)", "Polimorfismo (Polymorphism)",
+                            "Overloading/Overriding", "Programmazione orientata agli oggetti (OOP - Object-Oriented Programming)",
+                            "Classe (Class)", "Istanza (Instance)", "Costruttore (Constructor)", "Prototipo (Prototype)",
+                            "Programmazione basata su prototipi (Prototype-based programming)", "Garbage collection", "Flag bit a bit (Bitwise flags)",
+                            "Condizione (Condition)", "Loop", "Ricorsione (Recursion)", 
                         ]
                     },
                     {

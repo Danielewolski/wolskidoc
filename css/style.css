@@ -11,6 +11,7 @@ p{color: #5d6778;font-size:1rem}
 :target {scroll-margin-top: 67px;}
 .headertitle{font-size:1.25rem;font-weight:bolder;margin-bottom:0;}
 .subtitle{color: black; font-weight: 400; margin-bottom: 0; font-size: 1.25rem}
+strong{font-size: 1.1rem;}
 
 .sidebar {
     width: 250px; /* Larghezza fissa della sidebar su desktop */

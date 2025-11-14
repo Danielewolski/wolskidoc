@@ -509,7 +509,7 @@ obj.<span class="hljs-variable-language">display</span>();
                                 <h4 class="headertitle">Polimorfismo (Polymorphism)</h4>
                                 <p>Il <b>polimorfismo</b> in informatica è la capacità di un'espressione di assumere forme diverse, tipicamente nella programmazione orientata agli oggetti, dove consente a un oggetto di essere trattato come se fosse un tipo diverso, solitamente una sua superclasse comune. Ciò permette di scrivere codice più flessibile e riutilizzabile, poiché si possono chiamare metodi su oggetti diversi e il sistema saprà eseguire l'implementazione corretta per il tipo specifico dell'oggetto.</p>
                                 <div style="text-align: center; width: 100%">
-                                    <!-- <img src="polimorfismo.webp"></img> -->
+                                    <!-- <img src="polimorfismo.webp">-->
                                 </div>
                                 <strong>Esempio pratico</strong>
                                 <p>Immagina di avere una superclasse FiguraGeometrica con un metodo disegna().</p>
@@ -527,11 +527,188 @@ obj.<span class="hljs-variable-language">display</span>();
                             </div>
                             <hr>
                             <div>
-                                <h4 class="headertitle"></h4>
+                                <h4 class="headertitle">Overloading/Overriding</h4>
+                                <small>Esempi su JAVA</small>
+                                <!-- <div>
+                                    <img src="overjava.gif">
+                                </div> -->
+                                <p><b>L'overloading (o sovraccarico)</b> permette di definire più metodi con lo stesso nome ma con firme diverse (numero o tipo di parametri) nella stessa classe, mentre <b>l'overriding (o sovrascrittura)</b> consente a una sottoclasse di ridefinire un metodo già esistente nella sua classe padre, mantenendo la stessa firma. L'overloading è un meccanismo di polimorfismo che viene risolto a tempo di compilazione, mentre l'overriding permette di scegliere l'implementazione corretta a tempo di esecuzione.</p>
+                                <strong>Esempio Overloading</strong>
+                                <p>Si possono definire più versioni, dello stesso metodo, variando il numero e il tipo dei parametri, e/o la visibilità. L’overloading può essere fatto nella stessa classe o anche nelle classi derivate.</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-section">class</span> <span class="hljs-variable-language">A</span> {
+
+    <span class="hljs-section">public void</span> <span class="hljs-variable-language">hello</span>() {
+
+    }
+}
+
+<span class="hljs-section">public class</span> <span class="hljs-variable-language">B</span> <span class="hljs-section">extends</span> <span class="hljs-variable-language">A</span> {
+    
+    <span class="hljs-section">public void</span> <span class="hljs-variable-language">hello</span>(<span class="hljs-section">int</span> i) {
+
+    }
+    <span class="hljs-section">public void</span> <span class="hljs-variable-language">hello</span>(<span class="hljs-section">String</span> g) {
+
+    }
+    <span class="hljs-section">public void</span> <span class="hljs-variable-language">hello</span>(<span class="hljs-section">int</span> i, <span class="hljs-section">String</span> h, <span class="hljs-section">int</span> k) {
+
+    }
+}</code></pre>
+                                </div>
+                                <p>Se si tenta di modificare solo il tipo di ritorno di un metodo, ossia abbiamo due metodi identici tranne per il tipo di ritorno, otteniamo un errore di compilazione. Java li considera come se fossero due metodi uguali. Stessa cosa per la visibilità.</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-section">class</span> <span class="hljs-variable-language">A</span> {
+
+    <span class="hljs-section">public void</span> <span class="hljs-variable-language">hello</span>() {
+
+    }
+}
+
+<span class="hljs-section">public class</span> <span class="hljs-variable-language">B</span> <span class="hljs-section">extends</span> <span class="hljs-variable-language">A</span> {
+    
+    <span class="hljs-section">public int</span> <span class="hljs-variable-language">hello</span>(<span class="hljs-section">int</span> i) { <span class="hljs-comment">// errore: metodo duplicato</span>
+        return 1;
+    }
+
+    <span class="hljs-section">public String</span> <span class="hljs-variable-language">hello</span>(<span class="hljs-section">int</span> i) { <span class="hljs-comment">// errore: metodo duplicato</span>
+        return "";
+    }
+}</code></pre>
+                                </div>
+                                <strong>Esempio Overriding</strong>
+                                <p>Una classe derivata può avere un metodo identico ad un metodo già presente nella classe base. Qesta operazione di riscrittura è nota come ovverride.</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-section">class</span> <span class="hljs-variable-language">A</span> {
+
+    <span class="hljs-section">public void</span> <span class="hljs-variable-language">hello</span>() {
+        System.out.println(<span class="hljs-variable-language">"metodo del padre"</span>);
+    }
+
+    <span class="hljs-section">public void</span> <span class="hljs-variable-language">prova</span>() {
+        System.out.println(<span class="hljs-variable-language">"prova"</span>);
+    }
+}
+
+<span class="hljs-section">public class</span> <span class="hljs-variable-language">B</span> <span class="hljs-section">extends</span> <span class="hljs-variable-language">A</span> {
+    <span class="hljs-section">public void</span> <span class="hljs-variable-language">hello</span>() {
+        System.out.println(<span class="hljs-variable-language">"metodo del figlio"</span>);
+    }
+
+    <span class="hljs-section">public static void main</span> (<span class="hljs-section">String</span>[] args) {
+        <span class="hljs-section">B</span> tmp = <span class="hljs-section">new</span> <span class="hljs-variable-language">B</span>();
+
+        tmp.<span class="hljs-variable-language">hello</span>(); <span class="hljs-comment">//stampa "metodo del figlio", perchè stato fatto l'override del metodo</span>
+        tmp.<span class="hljs-variable-language">prova</span>(); <span class="hljs-comment">// stampa "prova", questo metodo appartiene al padre</span>
+    }
+}</code></pre>
+                                </div>
                             </div>
-                                                                                                                                                                        
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Programmazione orientata agli oggetti (OOP - Object-Oriented Programming)</h4>
+                                <p><b>OOP (Programmazione Orientata agli Oggetti)</b> è un paradigma di programmazione che modella i problemi del mondo reale tramite "oggetti". Questi oggetti sono istanze di "classi" e possiedono sia attributi (dati) che metodi (funzioni) che definiscono il loro comportamento. I principi chiave dell'OOP sono incapsulamento, ereditarietà e polimorfismo, che portano a vantaggi come riusabilità del codice, modularità e maggiore manutenibilità.</p>
+                            </div>   
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Classe (Class)</h4>
+                                <p>Nella programmazione orientata agli oggetti, una <b>classe</b> definisce le caratteristiche di un oggetto. La classe è una definizione modello delle proprietà e dei metodi di un oggetto, il "progetto" da cui vengono ricavate altre istanze più specifiche dell'oggetto.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Istanza (Instance)</h4>
+                                <p>Un'<b>istanza</b> è un oggetto specifico creato a partire da un modello generale, o classe. Una classe è un "modello" che definisce le caratteristiche e il comportamento di un tipo di oggetto, mentre ogni istanza è una realizzazione concreta di quel modello, come ad esempio "cane1" e "cane2" sono istanze della classe "Cane".</p>
+                            </div>   
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Costruttore (Constructor)</h4>
+                                <p>Un costruttore è un metodo speciale chiamato quando si crea un oggetto (un'istanza) di una classe, con lo scopo di inizializzare l'oggetto e impostare i suoi valori iniziali. I costruttori sono fondamentali nella programmazione orientata agli oggetti e servono a preparare l'oggetto per l'uso, assicurando che sia in uno stato valido fin dall'inizio.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Prototipo (Prototype)</h4>
+                                <p>Un <b>prototipo</b> è un modello iniziale e approssimato che serve a visualizzare e testare come un'applicazione o un prodotto apparirà e funzionerà prima dello sviluppo completo. È uno strumento prezioso per raccogliere feedback, validare il design e il concetto, identificare potenziali problemi e ridurre i rischi e i costi associati a modifiche in una fase successiva.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Programmazione basata su prototipi (Prototype-based programming)</h4>
+                                <p>La <b>programmazione basata sui prototipi</b> è uno stile di programmazione orientata agli oggetti in cui le classi non sono definite esplicitamente, ma piuttosto derivate aggiungendo proprietà e metodi a un'istanza di un'altra classe o, meno frequentemente, aggiungendoli a un oggetto vuoto. Questo tipo di stile consente di creare un oggetto senza prima definirne la classe.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Garbage collection</h4>
+                                <p><b>Garbage collection</b> è un termine utilizzato nella programmazione informatica per descrivere il processo di ricerca ed eliminazione di oggetti che non sono più referenziati da altri oggetti.</p>
+                                <p>In altre parole, la garbage collection è il processo di rimozione di tutti gli oggetti che non vengono utilizzati da altri oggetti. Spesso abbreviata con "GC", la garbage collection è un componente fondamentale del sistema di gestione della memoria utilizzato da JavaScript.</p>
+                                <strong>Vantaggi</strong>
+                                <ul style="margin-top: 0;">
+                                    <li>
+                                        <span><b>Meno bug:</b> Evita gli errori legati alla gestione manuale della memoria, come le memory leak e l'accesso a memoria non valida.</span>
+                                    </li>
+                                    <li>
+                                        <span><b>Migliore performance:</b> Le performance possono essere ottimizzate, ad esempio, separando gli oggetti per dimensione o raggruppando quelli di breve durata in "generazioni" che vengono raccolte più frequentemente.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Flag bit a bit (Bitwise flags)</h4>
+                                <p>I <b>bitwise flags</b> sono un modo per usare i bit di un singolo numero intero per memorizzare più stati booleani (sì/no) contemporaneamente, invece di usare variabili booleane separate. Un operatore bit a bit manipola i singoli bit di un numero. Un esempio pratico è rappresentare più permessi in un unico intero: potresti avere il bit 1 per il permesso di lettura e il bit 3 per il permesso di scrittura.</p>
+                                <strong>Esempio pratico</strong>
+                                <p style="margin: 0;">Immagina di voler rappresentare permessi utente in un programma:</p>
+                                <ul style="margin-top: 0;">
+                                    <li>
+                                        <span><b>Permesso di lettura:</b> bit 0 (2<sup>0</sup> = 1)</span>
+                                    </li>
+                                    <li>
+                                        <span><b>Permesso di scrittura:</b> bit 1 (2<sup>1</sup> = 2)</span>
+                                    </li>
+                                    <li>
+                                        <span><b>Permesso di scrittura:</b> bit 2 (2<sup>2</sup> = 4)</span>
+                                    </li>
+                                </ul>
+                                <p>Se un utente ha solo il permesso di lettura, la sua variabile permessi avrà il valore 1. Se ha lettura e scrittura, il valore sarà (1 + 2 = 3). </p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Condizione (Condition)</h4>
+                                <p>Una <b>condizione</b> è un insieme di regole che possono interrompere la normale esecuzione del codice o modificarla, a seconda che la condizione venga completata o meno.</p>
+                                <p>Un'istruzione o un insieme di istruzioni viene eseguito se una condizione specifica è soddisfatta. In caso contrario, viene eseguita un'altra istruzione. È anche possibile ripetere l'esecuzione di un'istruzione, o di un insieme di istruzioni, mentre una condizione non è ancora soddisfatta.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Loop</h4>
+                                <p>Un <b>loop</b> è una sequenza di istruzioni che viene ripetuta finché non viene soddisfatta una determinata condizione. Un esempio potrebbe essere il processo di acquisizione di un dato e modificarlo, per poi assicurarsi che una determinata condizione venga verificata, ad esempio se un contatore ha raggiunto un numero prestabilito.</p>
+                                <p>I cicli sono un modo per eseguire un'istruzione per un numero variabile di volte. Lo stesso effetto può essere ottenuto con la ricorsione , soprattutto nei linguaggi in cui tutti i dati sono immutabili , rendendo impossibile aggiornare una variabile contatore.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Ricorsione (Recursion)</h4>
+                                <p>La <b>ricorsione</b>, ovvero l'atto di una funzione che richiama se stessa, viene utilizzata per risolvere problemi che contengono sottoproblemi più piccoli. Una funzione ricorsiva può ricevere due input: un caso base (che termina la ricorsione) o un caso ricorsivo (che riprende la ricorsione).</p>
+                            </div>                                                                          
                         </div>
-                        <h3 id="dati-strutture">Dati & Strutture</h3>
+                        <div>
+                            <h3 id="dati-strutture">Dati & Strutture</h3>
+                            <div>
+                                <h4 class="headertitle">Struttura dei dati (Data structure)</h4>
+                                <p>La <b>struttura dei dati</b> è un modo particolare di organizzare i dati in modo che possano essere utilizzati in modo efficiente.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="headertitle">Vettore (Array)</h4>
+                                <p>Un <b>array</b> è una raccolta ordinata di dati (primitivi o oggetti, a seconda del linguaggio). Gli array vengono utilizzati per memorizzare più valori sotto un unico nome di variabile. Una variabile normale, invece, può memorizzare un solo valore.</p>
+                                <p>Ogni elemento di un array è associato a un numero, chiamato indice numerico, che consente di accedervi. In JavaScript, gli array partono dall'indice zero e possono essere manipolati con vari metodi.</p>
+                                <p>Gli array in JavaScript hanno questo aspetto:</p>
+                                <div class="docs-code-block">
+<pre><code class="hljs"><span class="hljs-comment">// Arrays in JavaScript can hold different types of data</span>
+<span class="hljs-section">const</span> myArray = [<span class="hljs-addition">1</span>, <span class="hljs-addition">2</span>, <span class="hljs-addition">3</span>];
+<span class="hljs-section">const</span> myArray = [<span class="hljs-addition">"Barbie"</span>, <span class="hljs-addition">"Ken"</span>, <span class="hljs-addition">"Midge"</span>];
+
+<span class="hljs-comment">// Array indexes starts at 0.</span>
+console.<span class="hljs-variable-language">log</span>(myArray[<span class="hljs-addition">0</span>]); <span class="hljs-comment">// output: 1</span>
+console.<span class="hljs-variable-language">log</span>(myArray[<span class="hljs-addition">2</span>]); <span class="hljs-comment">// output: "Midge"</span></code></pre>
+                                </div>
+                            </div> 
+                        </div>
                         <h3 id="contesto-ambito">Contesto & Ambito</h3>
                         <h3 id="scripting-runtime">Scripting & Runtime</h3>
                     </div>
